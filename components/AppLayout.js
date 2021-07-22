@@ -37,7 +37,6 @@ const AppLayout = ({ children }) => {
                         오른쪽 메뉴
                     </Col>
                 </Row>
-                {children}
             </div>
         </div>
     );
