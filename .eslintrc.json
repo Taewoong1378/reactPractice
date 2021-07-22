@@ -1,0 +1,31 @@
+// .eslintrc
+
+{
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2020": true
+    },
+    "extends": [
+				// 설정
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "import",
+        "react-hooks"
+    ],
+    "rules": {
+
+    }
+}
+
+// 추가적인 설정이나 변경하고 싶은 설정은 직접 정보를 찾아보면 된다.
+// 더 엄격하고 검사할 수도 있고, 다양한 옵션이 있다.
