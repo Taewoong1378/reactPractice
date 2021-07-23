@@ -92,11 +92,11 @@ const Signup = () => {
                         required 
                         onChange={onChangePasswordCheck}
                     />
-                    {passwordError && <ErrorMessage style={{ color: 'red' }}>비밀번호가 일치하지 않습니다.</ErrorMessage>}
+                    {passwordError && <ErrorMessage>비밀번호가 일치하지 않습니다.</ErrorMessage>}
                 </div>
                 <div>
                     <Checkbox name="user-term" checked={term} onChange={onChangeTerm}>위 사항에 대해 동의합니다.</Checkbox>
-                    {termError && <div style={{ color: 'red' }}>약관에 동의하셔야합니다.</div>}
+                    {termError && <ErrorMessage>약관에 동의하셔야합니다.</ErrorMessage>}
                 </div>
                 <div style={{ marginTop: 10}}>
                     <Button type="primary" htmlType="submit">가입하기</Button>
