@@ -1,15 +1,16 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Card, Avatar, Button } from 'antd';
 import PropTypes from 'prop-types';
 
 const UserProfile = ({ setIsLoggedIn }) => {
     
+    const style = useMemo(() => ({ marginTop: '30px' }));
     const onLogOut= useCallback(() => {
         setIsLoggedIn(false);
     }, []);
     
     return (
-        <Card
+        <Card style={style}
             actions={[
                 <div key="twit">게시글<br/>0</div>,
                 <div key="followgins">팔로잉<br/>0</div>,

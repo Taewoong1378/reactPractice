@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Menu, Input, Row, Col } from 'antd';
@@ -12,6 +12,7 @@ const SearchInput = styled(Input.Search)`
 `;
 
 const AppLayout = ({ children }) => {
+    const style = useMemo(() => ({ fontSize: '15px', fontWeight: 'bold', marginTop: '28px', textAlign: 'center' }));
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     return (
         <div>
@@ -37,7 +38,7 @@ const AppLayout = ({ children }) => {
                     <Col xs={24} md={12}>
                         {children}
                     </Col>
-                    <Col xs={24} md={6}>
+                    <Col style={style} xs={24} md={6}>
                         <a href="https://github.com/Taewoong1378" target="_blank" rel="noreferrer noopener">Made by Taewoong Kang</a>
                     </Col>
                 </Row>
